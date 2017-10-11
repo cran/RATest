@@ -28,7 +28,7 @@ the estimated regression discontinuity. The object of class \code{RDperm} is a l
 containing the following components:
  \item{results}{Matrix. Test Statistic, P-values and Q}
  \item{test.statistic}{Test Statistic}
- \item{q_type}{Type of Q used in the calculations, can be either,  "Defined by User" or "Rule of Thumb"}
+ \item{q_type}{Type of Q used in the calculations, can be either,  "Defined by User", the "Rule of Thumb" ("rot") or the "Alternative Rule of Thumb" ("arot). If the user wants to specify the q, he should supply a number, the default is 10. In the case the user wants to use the "Rule of Thumb" or the "Alternative Rule of Thumb", he/she should specify "rot" or "arot".}
  \item{n_perm}{number of permutations}
  \item{rv}{Character. Running variable name}
  \item{Z}{Vector. Running Variable}
