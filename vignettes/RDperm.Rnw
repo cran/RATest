@@ -528,13 +528,13 @@ It is worth noticing that the approximation $\tilde{p}$ satisfies (\ref{eq: pval
 
 The implementation of the test statistic heavily relies on $q$, the number of closest values of the running variable to the left and right of the cutoff. This quantity is small relative to the sample size $n$, and remains fixed as $n\to\infty$. \cite{canay2016approximate} recomend the rule of thumb
 \begin{align}\label{eq: tuning_par}
-q=\left\lceil f(0)\sigma_Z\sqrt{1-\rho^2}\frac{n^{0.9}}{\log n} \right\rceil
+q=\left\lceil f(0)\sigma_Z\sqrt{10*(1-\rho^2)}\frac{n^{3/4}}{\log n} \right\rceil
 \end{align}
 where $\lceil\nu\rceil$ is the smallest integer greater or equal to $\nu$, $f(0)$ is the density if $Z$ at zero, $\rho$ is the coefficient of correlation $W$ and $Z$, and $\sigma^2_Z$ is the variance of $Z$. Additionally, the authors have considered the following alternative rule of thumb
 \begin{align}\label{eq: alt_tuning_par}
-q^a=\left\lceil f(0)\sigma_Z\sqrt{10*(1-\rho^2)}\frac{n^{3/4}}{\log n} \right\rceil
+q^a=\left\lceil f(0)\sigma_Z\sqrt{1-\rho^2}\frac{n^{0.9}}{\log n} \right\rceil
 \end{align}
-finding similar results. The main difference in these rules is that the former grows more rapidly. These quantities are only rules of thumb and have to be seen under this light. Whether or not it's an optimal rule is something for further research. See \cite{canay2016approximate} section 3.1 for additional motivation.
+finding similar results. The main difference in these rules is that the latter grows more rapidly. These quantities are only rules of thumb and have to be seen under this light. Whether or not it's an optimal rule is something for further research. See \cite{canay2016approximate} section 3.1 for additional motivation.
 
 
 \subsubsection{Scalar Case}\label{sec: scalar_q}
@@ -542,7 +542,7 @@ finding similar results. The main difference in these rules is that the former g
 Equations~(\ref{eq: tuning_par})-(\ref{eq: alt_tuning_par}) can be estimated from sample. Consider Equation~(\ref{eq: tuning_par}) first. The feasible tuning parameter is 
 \begin{align}\label{eq: qrot_hat}
 \hat{q}=\left\lceil 
-\max\left\{\min\left\{\hat{f}_n(0)\hat{\sigma}_{n,z}\sqrt{1-\hat{\rho}^2_n}\frac{n^{0.9}}{\log n},
+\max\left\{\min\left\{\hat{f}_n(0)\hat{\sigma}_{n,z}\sqrt{10*(1-\hat{\rho}^2_n)}\frac{n^{3/4}}{\log n},
 q_{UB}\right\},q_{LB}\right\}
 \right\rceil
 \end{align}

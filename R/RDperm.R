@@ -1,4 +1,4 @@
-#' @title Regression Discontinuity Design Permutation test
+#' @title Regression Discontinuity Design Permutation Test
 #'
 #' @description A permutation test for continuity of covariates in Sharp Regression Discontinuity Design as described in Canay and Kamat (2017).
 #'
@@ -6,7 +6,7 @@
 #' @param z Character. Running variable name. This is the scalar random variable that defines, along with the cutoff, the treatment assignment rule in the sharp regression discontinuity design.
 #' @param data Data.frame.
 #' @param n.perm Numeric. Number of permutations needed for the stochastic approximation of the p-values. See remark 3.2 in Canay and Kamat (2017). The default is B=499.
-#' @param q_type A fixed and small (relative to the sample size) natural number that will define the \eqn{q}{q} closest values of the order statistic of \eqn{Z}{Z} to the right and to the left of the cutoff. If 'rot', it calls for the Rule of Thumb described in Canay and Kamat (2017), section 3.1.
+#' @param q_type A fixed and small (relative to the sample size) natural number that will define the \eqn{q}{q} closest values of the order statistic of \eqn{Z}{Z} to the right and to the left of the cutoff. The default, 'rot', value is given by the feasible rule of thumb in footnote 4 of Canay and Kamat (2017), section 3.1. If 'arot', it calls for the Rule of Thumb described in equation (15) of Canay and Kamat (2017), section 3.1. The default option grows at a slower rate than the optional rule of thumb, but adds a larger constant.
 #' @param cutoff Numeric. The scalar defining the threshold of the running variable.
 #' @param test.statistic Character. A rank test statistic satisfying rank invariance. The default is a Cramer-von Mises test statistic.
 #' @return The functions \code{summary} and \code{plot} are used to obtain and print a summary and plot of
@@ -14,7 +14,7 @@
 #' containing the following components:
 #'  \item{results}{Matrix. Test Statistic, P-values and Q}
 #'  \item{test.statistic}{Test Statistic}
-#'  \item{q_type}{Type of Q used in the calculations, can be either,  "Defined by User", the "Rule of Thumb" ("rot") or the "Alternative Rule of Thumb" ("arot). If the user wants to specify the q, he should supply a number, the default is 10. In the case the user wants to use the "Rule of Thumb" or the "Alternative Rule of Thumb", he/she should specify "rot" or "arot".}
+#'  \item{q_type}{Type of Q used in the calculations, can be either,  "Defined by User", the "Rule of Thumb"  or the "Alternative Rule of Thumb".}
 #'  \item{n_perm}{number of permutations}
 #'  \item{rv}{Character. Running variable name}
 #'  \item{Z}{Vector. Running Variable}
@@ -222,7 +222,7 @@ calc_stat.CvM<-function(x){
 
 
 
-qrot<-function(w,W_z){
+aqrot<-function(w,W_z){
   w<-W_z[,w]
   z<-W_z[,"z"]
   N<-length(w)
@@ -242,7 +242,7 @@ qrot<-function(w,W_z){
 
 
 
-aqrot<-function(w,W_z){
+qrot<-function(w,W_z){
   w<-W_z[,w]
   z<-W_z[,"z"]
   N<-length(w)
