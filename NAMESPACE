@@ -2,7 +2,6 @@
 
 S3method(plot,RDperm)
 S3method(summary,RDperm)
-S3method(summary,RPT)
 export(CvM.stat)
 export(H.cdf)
 export(RDperm)
