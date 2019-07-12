@@ -38,7 +38,7 @@
 #' # Observed Outcome 
 #' Y = ifelse( Tx, Y1, Y0 )
 #' dta <- data.frame(Y = Y, Z = as.numeric(Tx))
-#' pt.GoF<-PT.Khmaladze.fit(dta$Y[dta$Z==1],data$Y[dta$Z==0],n.perm = 49)
+#' pt.GoF<-PT.Khmaladze.fit(dta$Y[dta$Z==1],dta$Y[dta$Z==0],n.perm = 49)
 #' summary(pt.GoF)
 #' }
 #' @export

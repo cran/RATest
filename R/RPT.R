@@ -286,7 +286,7 @@ RPT<-function(formula,data,test="means",n.perm=499, na.action, wilcoxon.option="
 "calc_stat_median"<-function(x,groups,one,weights_v,weights_d,k){
   mu<-as.numeric(by(x,groups,median))
   sigmas<-as.numeric(by(x,groups,boot.var))
-  V<-as.numeric((weights_v*mu)/sigmas)
+  V<-as.numeric((weights_v*mu)/sqrt(sigmas))
   
   d<-as.numeric(weights_d*sigmas)
   d_inv<-solve(diag(d))
