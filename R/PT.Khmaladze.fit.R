@@ -24,7 +24,7 @@
 #' @author Ignacio Sarmiento Barbieri
 #' @references  
 #' Khmaladze, E. (1981). Martingale Approach in the Theory of Goodness-of-fit Tests. Theory of Probability and its Application, 26: 240–257.
-#' Chung, Eunyi and Mauricio Olivares (2018). Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test Approach. Working Paper.
+#' Chung, Eunyi and Mauricio Olivares (2019). Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test Approach. Working Paper.
 #' 
 #' @keywords permutation test goodness-of-fit Khmaladze Transformation
 #' @import quantreg

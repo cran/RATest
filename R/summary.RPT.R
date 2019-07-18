@@ -1,3 +1,23 @@
+#' Summarizing Robust Permutation Test
+#' 
+#' \code{summary} method for class \code{"RPT"}
+#' 
+#' @method summary RPT
+#' @param object an object of class \code{"RPT"}, usually a result of a call to \code{\link{RPT}}
+#' @param digits number of digits to display
+#' @param ... unused
+#' @return \code{summary.RPT} returns an object of \link{class} "\code{summary.RPT}" which has the following components
+#'  \item{results}{Matrix with the Testing Problem, Point Estimates, Sample Sizes, Test Statistic, P-values and Sample Sizes.}
+#' @author Maurcio Olivares Gonzalez
+#' @author Ignacio Sarmiento Barbieri
+#' @export
+
+
+
+
+
+
+
 summary.RPT<-function(object, ..., digits=max(3, getOption("digits") - 3)){
 
   cat("\n")

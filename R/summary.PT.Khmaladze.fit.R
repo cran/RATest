@@ -1,10 +1,26 @@
+#' Summarizing Permutation Test for Heterogeneous Treatment Effects with Estimated Nuisance Parameter
+#' 
+#' \code{summary} method for class \code{"PT.Khmaladze.fit"}
+#' 
+#' @method summary PT.Khmaladze.fit
+#' @param object an object of class \code{"PT.Khmaladze.fit"}, usually a result of a call to \code{\link{PT.Khmaladze.fit}}
+#' @param digits number of digits to display
+#' @param ... unused
+#' @return \code{summary.PT.Khmaladze.fit} returns an object of \link{class} "\code{summary.PT.Khmaladze.fit}" which has the following components
+#'  \item{results}{Matrix with the Testing Problem, Sample Sizes, Number of Permutations, ATE, Test Statistic, Critical value and P-value.}
+#' @author Maurcio Olivares Gonzalez
+#' @author Ignacio Sarmiento Barbieri
+#' @export
+
+
+
 summary.PT.Khmaladze.fit<-function(object, ..., digits=max(3, getOption("digits") - 3)){
   
   cat("\n")
-  cat("***********************************************************\n")
-  cat("**   Goodness-of-fit testing with a nuisance parameter:  **\n")   
-  cat("**         Asymptotically Robust Permutation Test        **\n")
-  cat("***********************************************************\n")
+  cat("**************************************************************************\n")
+  cat("**   Testing Heterogeneous Treatment Effect with a nuisance parameter:  **\n")   
+  cat("**                   Asymptotically Robust Permutation Test             **\n")
+  cat("**************************************************************************\n")
   cat("\n")
   cat("* Testing Problem: testing goodness of fit in the presence *\n")
   cat("* of a nuisance parameter using a permutation test that is *\n")

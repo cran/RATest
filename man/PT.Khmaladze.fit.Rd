@@ -40,13 +40,13 @@ Tx = sample(100) <= 0.5*(100)
 # Observed Outcome 
 Y = ifelse( Tx, Y1, Y0 )
 dta <- data.frame(Y = Y, Z = as.numeric(Tx))
-pt.GoF<-PT.Khmaladze.fit(dta$Y[dta$Z==1],data$Y[dta$Z==0],n.perm = 49)
+pt.GoF<-PT.Khmaladze.fit(dta$Y[dta$Z==1],dta$Y[dta$Z==0],n.perm = 49)
 summary(pt.GoF)
 }
 }
 \references{
 Khmaladze, E. (1981). Martingale Approach in the Theory of Goodness-of-fit Tests. Theory of Probability and its Application, 26: 240–257.
-Chung, Eunyi and Mauricio Olivares (2018). Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test Approach. Working Paper.
+Chung, Eunyi and Mauricio Olivares (2019). Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test Approach. Working Paper.
 }
 \author{
 Maurcio Olivares-Gonzalez
