@@ -2,7 +2,7 @@
 % Please edit documentation in R/PT.Khmaladze.fit.R
 \name{PT.Khmaladze.fit}
 \alias{PT.Khmaladze.fit}
-\title{Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test}
+\title{Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter}
 \usage{
 PT.Khmaladze.fit(y1, y0, alpha = 0.05, n.perm = 999)
 }
@@ -29,7 +29,7 @@ An object of class "PT.Khmaladze.fit" is a list containing at least the followin
  \item{sample_sizes}{Groups size.}
 }
 \description{
-A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares-Gonzalez (2018).
+A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares (2019).
 }
 \examples{
 \dontrun{
@@ -46,7 +46,7 @@ summary(pt.GoF)
 }
 \references{
 Khmaladze, E. (1981). Martingale Approach in the Theory of Goodness-of-fit Tests. Theory of Probability and its Application, 26: 240–257.
-Chung, Eunyi and Mauricio Olivares (2019). Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test Approach. Working Paper.
+Chung, Eunyi and Mauricio Olivares (2019). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Working Paper.
 }
 \author{
 Maurcio Olivares-Gonzalez

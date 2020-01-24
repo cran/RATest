@@ -60,6 +60,7 @@
 #' Hollander, M. (1967). Asymptotic efficiency of two nonparametric competitors of wilcoxon’s two sample test. Journal of the American Statistical Association, 62(319):939–949.
 #' Lehmann, E. L. (1951). Consistency and unbiasedness of certain nonparametric tests. The Annals of Mathematical Statistics, pages 165–179.
 #' @keywords robust permutation test rpt
+#' @include group.action.R
 #' @import quantreg
 #' @importFrom stats cor var runif median pbinom
 #' @examples
@@ -104,12 +105,8 @@ RPT<-function(formula,data,test="means",n.perm=499, na.action, wilcoxon.option="
   mf<-mf[,c(2,1)]#change the order 
   
   # Generate random permutations
-  sample.indexes = lapply(1:n.perm, function(x) sample(1:N))
-  S_perm_list<-lapply(sample.indexes,function(x,db) {db[x]},Sn)
-  S_perm<-do.call(cbind,S_perm_list)
-  
+  S_perm <- group.action(Sn,n.perm,"permutations")
   mf<-cbind(mf,S_perm) #first column is the group indicator, second original/observed data, rest are permutations
-  
   lengths <- by(mf[,1],mf[,1],length)  #observations per group
   
   

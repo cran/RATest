@@ -1,7 +1,7 @@
 
-#' @title  Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test
+#' @title  Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter
 #'
-#' @description A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares-Gonzalez (2018).
+#' @description A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares (2019).
 #' 
 #' @param y1 Numeric. A vector containing the response variable of the treatment group.
 #' @param y0 Numeric. A vector containing the response variable of the control group.  
@@ -24,9 +24,11 @@
 #' @author Ignacio Sarmiento Barbieri
 #' @references  
 #' Khmaladze, E. (1981). Martingale Approach in the Theory of Goodness-of-fit Tests. Theory of Probability and its Application, 26: 240–257.
-#' Chung, Eunyi and Mauricio Olivares (2019). Non-Parametric Hypothesis Testing with a Nuisance Parameter: A Permutation Test Approach. Working Paper.
+#' Chung, Eunyi and Mauricio Olivares (2019). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Working Paper.
 #' 
 #' @keywords permutation test goodness-of-fit Khmaladze Transformation
+#' @include group.action.R
+#' @include randomization.test.R
 #' @import quantreg
 #' @importFrom stats quantile cor var runif 
 #' @examples
@@ -63,19 +65,18 @@ PT.Khmaladze.fit <- function(y1, y0, alpha=0.05, n.perm=999){
   # Recentering
   Y1.star <- y1- shift
   Y0.star <- y0
+  Z <- c(Y1.star,Y0.star) # Stacked data
   # Grid needed for the density estimation and numeric integration
   p <- 3*N
   eps <- .Machine$double.eps
   t <- seq(eps, 1, length.out=p)
-  # Permutations of data
-  Sn <- c(Y1.star,Y0.star)
-  sample.indexes = lapply(1:n.perm, function(x) sample(1:N))
-  S_perm_list<-lapply(sample.indexes,function(x,db) {db[x]},Sn)
-  S_perm<-do.call(cbind,S_perm_list)
-  Sn <- cbind(Sn,S_perm)
+  
+  # Generate random permutations
+  S_perm <- group.action(Z,n.perm,"permutations")
+  Sn <- cbind(Z,S_perm)
     
   # Calculation of the test statistic for all permutations. 
-  stat <- apply(Sn,2, function(x) Khm.trans(x,m,N-m,n.perm,t,p))
+  stat <- apply(Sn,2, function(x) Khm.trans(x,m,N-m,t,p))
   
   # Observed Test statistic
   T.obs<-stat[1] 
@@ -83,7 +84,7 @@ PT.Khmaladze.fit <- function(y1, y0, alpha=0.05, n.perm=999){
   T.perm<-stat[-1] 
   
   # Critical Value
-  cv <- randomization.test(stat,alpha)
+  cv <- randomization.test(T.obs,T.perm,alpha)
   #Indicator rule
   ind.rule<- mean(ifelse(T.perm>=T.obs,1,0))
   
@@ -105,7 +106,7 @@ PT.Khmaladze.fit <- function(y1, y0, alpha=0.05, n.perm=999){
   
 }
 
-"Khm.trans" <- function(Z,m,n,n.perm,t,p){
+"Khm.trans" <- function(Z,m,n,t,p){
   # Define treatent and control groups (these are recentered values)
   Y1 <- Z[1:m]
   Y0 <- Z[(m+1):(m+n)]
@@ -161,33 +162,33 @@ PT.Khmaladze.fit <- function(y1, y0, alpha=0.05, n.perm=999){
 
 
 
-"randomization.test" <- function(x,alpha){
-  # Number of permutations
-  n.perm <- length(x)
-  # Observed test statistic
-  Tn.obs <- x[1]
-  
-  # Corret size of the test
-  # See Lehmann & Romano (2005), p. 633
-  y <- sort(x)
-  k <- n.perm - floor(n.perm*alpha)
-  cv = y[k]
-  M.plus <- sum(y>cv)
-  M.zero <- sum(y==cv)
-  a <-  (n.perm*alpha - M.plus)/M.zero
-  
-  # Rejection
-  if(Tn.obs > cv){
-    out <-  1
-  } 
-  else if(Tn.obs == cv){
-    out <-  ifelse(runif(1) <= a, 1, 0)
-  } 
-  else {
-    out <-  0 
-  }
-  return(c(cv,out))
-}
+# "randomization.test" <- function(x,alpha){
+#   # Number of permutations
+#   n.perm <- length(x)
+#   # Observed test statistic
+#   Tn.obs <- x[1]
+#   
+#   # Corret size of the test
+#   # See Lehmann & Romano (2005), p. 633
+#   y <- sort(x)
+#   k <- n.perm - floor(n.perm*alpha)
+#   cv = y[k]
+#   M.plus <- sum(y>cv)
+#   M.zero <- sum(y==cv)
+#   a <-  (n.perm*alpha - M.plus)/M.zero
+#   
+#   # Rejection
+#   if(Tn.obs > cv){
+#     out <-  1
+#   } 
+#   else if(Tn.obs == cv){
+#     out <-  ifelse(runif(1) <= a, 1, 0)
+#   } 
+#   else {
+#     out <-  0 
+#   }
+#   return(c(cv,out))
+# }
 
 
 

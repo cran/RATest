@@ -9,15 +9,15 @@ group.action(Z, M, type = "permutations")
 \arguments{
 \item{Z}{Numeric. A vector of size \eqn{N}{N} to which the group action will act on. In the two-sample testing problem, \eqn{Z}{Z} is the pooled sample.}
 
-\item{M}{Numeric. Number of actions to be performed. This is the number of transformations used in the stochastic approximation to the test. This is due to the fact that in some cases \deqn{M=\vert \mathbf{G}\vert} is too large, which makes the application of the actions computationally expensive.}
+\item{M}{Numeric. Number of actions to be performed. This is the number of transformations used in the stochastic approximation to the test. This is due to the fact that in some cases \eqn{M=\vert \mathbf{G}\vert} is too large, which makes the application of the actions computationally expensive.}
 
-\item{type}{Character. The action to be performed. It represents \deqn{gx}, the action the action  of \deqn{g\in\mathbf{G}} on \deqn{x\in\Omega}. It can be either permutations or sign changes.}
+\item{type}{Character. The action to be performed. It represents \eqn{gx}, the action the action  of \eqn{g\in\mathbf{G}} on \eqn{x\in\Omega}. It can be either permutations or sign changes.}
 }
 \value{
-Numeric. A matrix of size \deqn{N\times M} where \eqn{N}{N} is the size of input \eqn{Z}{Z} and \eqn{M}{M} is the number of actions to be performed on \eqn{Z}{Z}.
+Numeric. A matrix of size \eqn{N\times M} where \eqn{N}{N} is the size of input \eqn{Z}{Z} and \eqn{M}{M} is the number of actions to be performed on \eqn{Z}{Z}.
 }
 \description{
-Calculates the pre-specified actions on data. Consider data \eqn{Z}{Z} taking values in a sample space \eqn{\Omega}. Let \deqn{\mathbf{G}} be a finite group of transformations from \eqn{\Omega}  onto itself, with \deqn{M=\vert \mathbf{G}\vert}. This function applies \deqn{gZ} as \eqn{g}{g} varies in \deqn{\bf{G}}. If \eqn{Z}{Z} is a vector of size\eqn{N}{N} and the actions \eqn{g}{g} are permutations, \deqn{M=N!}. If the actions \eqn{g}{g} are sign changes, then \deqn{M=\{1,-1\}^{N}}.
+Calculates the pre-specified actions on data. Consider data \eqn{Z}{Z} taking values in a sample space \eqn{\Omega}. Let \eqn{\mathbf{G}} be a finite group of transformations from \eqn{\Omega}  onto itself, with \eqn{M=\vert \mathbf{G}\vert}. This function applies \eqn{gZ} as \eqn{g}{g} varies in \eqn{\bf{G}}. If \eqn{Z}{Z} is a vector of size\eqn{N}{N} and the actions \eqn{g}{g} are permutations, \eqn{M=N!}. If the actions \eqn{g}{g} are sign changes, then \eqn{M=\{1,-1\}^{N}}.
 }
 \references{
 Lehmann, Erich L. and Romano, Joseph P (2005) Testing statistical hypotheses.Springer Science & Business Media.
