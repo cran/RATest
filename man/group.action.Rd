@@ -23,7 +23,7 @@ Calculates the pre-specified actions on data. Consider data \eqn{Z}{Z} taking va
 Lehmann, Erich L. and Romano, Joseph P (2005) Testing statistical hypotheses.Springer Science & Business Media.
 }
 \author{
-Maurcio Olivares Gonzalez
+Maurcio Olivares
 
 Ignacio Sarmiento Barbieri
 }

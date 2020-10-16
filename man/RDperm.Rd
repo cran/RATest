@@ -4,8 +4,15 @@
 \alias{RDperm}
 \title{Regression Discontinuity Design Permutation Test}
 \usage{
-RDperm(W, z, data, n.perm = 499, q_type = 10, cutoff = 0,
-  test.statistic = "CvM")
+RDperm(
+  W,
+  z,
+  data,
+  n.perm = 499,
+  q_type = 10,
+  cutoff = 0,
+  test.statistic = "CvM"
+)
 }
 \arguments{
 \item{W}{Character. Vector of covariates names. The procedure will test the null hypothesis of continuity of the distribution of each element in W at the cutoff.}
@@ -14,9 +21,9 @@ RDperm(W, z, data, n.perm = 499, q_type = 10, cutoff = 0,
 
 \item{data}{Data.frame.}
 
-\item{n.perm}{Numeric. Number of permutations needed for the stochastic approximation of the p-values. See remark 3.2 in Canay and Kamat (2017). The default is B=499.}
+\item{n.perm}{Numeric. Number of permutations needed for the stochastic approximation of the p-values. See remark 3.2 in Canay and Kamat (2018). The default is B=499.}
 
-\item{q_type}{A fixed and small (relative to the sample size) natural number that will define the \eqn{q}{q} closest values of the order statistic of \eqn{Z}{Z} to the right and to the left of the cutoff. The default, 'rot', value is given by the feasible rule of thumb in footnote 4 of Canay and Kamat (2017), section 3.1. If 'arot', it calls for the Rule of Thumb described in equation (15) of Canay and Kamat (2017), section 3.1. The default option grows at a slower rate than the optional rule of thumb, but adds a larger constant.}
+\item{q_type}{A fixed and small (relative to the sample size) natural number that will define the \eqn{q}{q} closest values of the order statistic of \eqn{Z}{Z} to the right and to the left of the cutoff. The default, 'rot', value is given by the feasible rule of thumb in footnote 4 of Canay and Kamat (2018), section 3.1. If 'arot', it calls for the Rule of Thumb described in equation (15) of Canay and Kamat (2018), section 3.1. The default option grows at a slower rate than the optional rule of thumb, but adds a larger constant.}
 
 \item{cutoff}{Numeric. The scalar defining the threshold of the running variable.}
 
@@ -38,7 +45,7 @@ containing the following components:
  \item{S_perm}{List. Permutations of the induced order statistic.}
 }
 \description{
-A permutation test for continuity of covariates in Sharp Regression Discontinuity Design as described in Canay and Kamat (2017).
+A permutation test for continuity of covariates in Sharp Regression Discontinuity Design as described in Canay and Kamat (2018).
 }
 \examples{
 permtest<-RDperm(W=c("demshareprev"),z="difdemshare",data=lee2008)
@@ -49,10 +56,10 @@ summary(permtest)
 }
 }
 \references{
-Canay, I and Kamat V, (2017) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. \url{http://faculty.wcas.northwestern.edu/~iac879/wp/RDDPermutations.pdf}
+Canay, I and Kamat V, (2018) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. The Review of Economic Studies, 85(3): 1577-1608
 }
 \author{
-Maurcio Olivares Gonzalez
+Maurcio Olivares
 
 Ignacio Sarmiento Barbieri
 }

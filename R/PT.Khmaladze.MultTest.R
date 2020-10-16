@@ -36,7 +36,7 @@
 
 #' @author Maurcio Olivares
 #' @references 
-#' Chung, E. and Olivares, M. (2019). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Working Paper.
+#' Chung, E. and Olivares, M. (2020). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
 #' Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics, pages 65-70.
 #' Westfall, P.H. and Young, S.S. (1993). Resampling-based multiple testing: Examples and methods for p-value adjustment, Volume 279, John & Wiley Sons.
 #' @keywords Khmaladze Permutation Test Multiple Testing Westfall-Young

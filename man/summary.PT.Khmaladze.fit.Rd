@@ -4,8 +4,7 @@
 \alias{summary.PT.Khmaladze.fit}
 \title{Summarizing Permutation Test for Heterogeneous Treatment Effects with Estimated Nuisance Parameter}
 \usage{
-\method{summary}{PT.Khmaladze.fit}(object, ..., digits = max(3,
-  getOption("digits") - 3))
+\method{summary}{PT.Khmaladze.fit}(object, ..., digits = max(3, getOption("digits") - 3))
 }
 \arguments{
 \item{object}{an object of class \code{"PT.Khmaladze.fit"}, usually a result of a call to \code{\link{PT.Khmaladze.fit}}}

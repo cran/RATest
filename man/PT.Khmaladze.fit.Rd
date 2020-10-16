@@ -16,7 +16,7 @@ PT.Khmaladze.fit(y1, y0, alpha = 0.05, n.perm = 999)
 \item{n.perm}{Numeric. Number of permutations needed for the stochastic approximation of the p-values. The default is n.perm=999.}
 }
 \value{
-An object of class "PT.Khmaladze.fit" is a list containing at least the following components:
+An object of class "PT.Khmaladze.fit" containing at least the following components:
 
  \item{n_populations}{Number of grups.}
  \item{N}{Sample Size.}
@@ -29,7 +29,7 @@ An object of class "PT.Khmaladze.fit" is a list containing at least the followin
  \item{sample_sizes}{Groups size.}
 }
 \description{
-A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares (2019).
+A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares (2020).
 }
 \examples{
 \dontrun{
@@ -46,12 +46,10 @@ summary(pt.GoF)
 }
 \references{
 Khmaladze, E. (1981). Martingale Approach in the Theory of Goodness-of-fit Tests. Theory of Probability and its Application, 26: 240–257.
-Chung, Eunyi and Mauricio Olivares (2019). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Working Paper.
+Chung, Eunyi and Mauricio Olivares (2020). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
 }
 \author{
-Maurcio Olivares-Gonzalez
-
-Ignacio Sarmiento Barbieri
+Maurcio Olivares
 }
 \keyword{Khmaladze}
 \keyword{Transformation}

@@ -25,10 +25,10 @@ plot(permtest,w="demshareprev")
 }
 }
 \references{
-Canay, I and Kamat V, (2017) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. \url{http://faculty.wcas.northwestern.edu/~iac879/wp/RDDPermutations.pdf}
+Canay, I and Kamat V, (2018) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. The Review of Economic Studies, 85(3): 1577-1608
 }
 \author{
-Maurcio Olivares Gonzalez
+Maurcio Olivares
 
 Ignacio Sarmiento Barbieri
 }

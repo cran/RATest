@@ -4,7 +4,7 @@ knitr::render_sweave()
 options(prompt = "R> ", continue = "+  ", digits = 2, show.signif.stars = FALSE)
 cleanup <- FALSE
 
-## ----panel.asetup, include=FALSE-----------------------------------------
+## ----panel.asetup, include=FALSE----------------------------------------------
 panel.a.cap = "Candidate's probability of winning election $t+1$, by margin of victory in election $t$: local averages and logit polynomial fit"
 
 ## ----panel.a, fig.height = 4, fig.width = 10, fig.cap = panel.a.cap, echo=FALSE, warning=FALSE----
@@ -44,7 +44,7 @@ plot.a  <- ggplot(data = panel.a, aes(x = i005))                       +
   theme_bw()
 plot.a
 
-## ----panel.bsetup, include=FALSE-----------------------------------------
+## ----panel.bsetup, include=FALSE----------------------------------------------
 panel.b.cap = "Candidate's probability of winning election $t-1$, by margin of victory in election $t$: local averages and logit polynomial fit"
 
 ## ----panel.b, fig.height = 4, fig.width = 10, fig.cap = panel.a.cap, echo=FALSE, warning=FALSE----
@@ -83,18 +83,18 @@ plot.b  <- ggplot(data = panel.b, aes(x = i005))                       +
   theme_bw()
 plot.b
 
-## ----userdefined_single variable-----------------------------------------
+## ----userdefined_single variable----------------------------------------------
 # Lee2008
 set.seed(101)
 permtest<-RDperm(W="demshareprev", z="difdemshare",data=lee2008,q_type=51)
 summary(permtest)
 
-## ----rot-----------------------------------------------------------------
+## ----rot----------------------------------------------------------------------
 permtest_rot<-RDperm(W=c("demshareprev","demwinprev", "demofficeexp"),
                       z="difdemshare",data=lee2008,q_type='rot', n.perm=600)
 summary(permtest_rot)
 
-## ----hist.cdf.setup, include=FALSE---------------------------------------
+## ----hist.cdf.setup, include=FALSE--------------------------------------------
 hist.cdf.cap = "Histogram and CDF for Democrat vote share t-1"
 
 ## ----hist.cdf, fig.height = 4, fig.width = 10, fig.cap = hist.cdf.cap , echo=TRUE----

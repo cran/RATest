@@ -10,10 +10,10 @@
 #' @param plot.class Character. Can be: "both" for a histogram and cdf plot, "hist" for a histogram or "cdf" for only the cdf plot
 #' @param ... Additional ggplot2 controls
 #'
-#' @author Maurcio Olivares Gonzalez
+#' @author Maurcio Olivares
 #' @author Ignacio Sarmiento Barbieri
 #' @references
-#' Canay, I and Kamat V, (2017) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. \url{http://faculty.wcas.northwestern.edu/~iac879/wp/RDDPermutations.pdf}
+#' Canay, I and Kamat V, (2018) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. The Review of Economic Studies, 85(3): 1577-1608
 #' @keywords permutation rdperm
 #' @importFrom stats ecdf
 #' @importFrom graphics plot

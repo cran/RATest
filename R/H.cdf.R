@@ -5,10 +5,10 @@
 #' @param t Numeric. The scalar needed for the calculation of the CDF.
 #' @return Numeric. For a sample \eqn{W=(w_1,\dots,w_n)}, returns the fraction of observations less or equal to \eqn{t}{t}.
 #'
-#' @author Maurcio Olivares Gonzalez
+#' @author Maurcio Olivares
 #' @author Ignacio Sarmiento Barbieri
 #' @references
-#' Canay, I and Kamat V, (2017) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. \url{http://faculty.wcas.northwestern.edu/~iac879/wp/RDDPermutations.pdf}
+#' Canay, I and Kamat V, (2018) Approximate Permutation Tests and Induced Order Statistics in the Regression Discontinuity Design. The Review of Economic Studies, 85(3): 1577-1608
 #' @keywords permutation test rdperm
 #' @export
 

@@ -4,8 +4,7 @@
 \alias{summary.PT.Khmaladze.MultTest}
 \title{Summarizing Permutation Test for Within-grpup Treatment Effect Heterogeneity in the presence of an Estimated Nuisance Parameter}
 \usage{
-\method{summary}{PT.Khmaladze.MultTest}(object, ..., digits = max(3,
-  getOption("digits") - 3))
+\method{summary}{PT.Khmaladze.MultTest}(object, ..., digits = max(3, getOption("digits") - 3))
 }
 \arguments{
 \item{object}{an object of class \code{"PT.Khmaladze.MultTest"}, usually a result of a call to \code{\link{PT.Khmaladze.MultTest}}}

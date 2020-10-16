@@ -1,14 +1,14 @@
 
 #' @title  Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter
 #'
-#' @description A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares (2019).
+#' @description A permutation test of the two-sample goodness-of-fit hypothesis in the presence of an estimated niusance parameter. The permutation test considered here is based on the Khmaladze transformation of the empirical process (Khmaladze (1981)), and adapted by Chung and Olivares (2020).
 #' 
 #' @param y1 Numeric. A vector containing the response variable of the treatment group.
 #' @param y0 Numeric. A vector containing the response variable of the control group.  
 #' @param alpha Numeric. Nominal level for the test. The default is 0.05.
 #' @param n.perm Numeric. Number of permutations needed for the stochastic approximation of the p-values. The default is n.perm=999.
 
-#' @return An object of class "PT.Khmaladze.fit" is a list containing at least the following components:
+#' @return An object of class "PT.Khmaladze.fit" containing at least the following components:
 #' 
 #'  \item{n_populations}{Number of grups.}
 #'  \item{N}{Sample Size.}
@@ -20,11 +20,10 @@
 #'  \item{n_perm}{Number of permutations.}
 #'  \item{sample_sizes}{Groups size.}
 #'  
-#' @author Maurcio Olivares-Gonzalez
-#' @author Ignacio Sarmiento Barbieri
+#' @author Maurcio Olivares
 #' @references  
 #' Khmaladze, E. (1981). Martingale Approach in the Theory of Goodness-of-fit Tests. Theory of Probability and its Application, 26: 240–257.
-#' Chung, Eunyi and Mauricio Olivares (2019). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Working Paper.
+#' Chung, Eunyi and Mauricio Olivares (2020). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
 #' 
 #' @keywords permutation test goodness-of-fit Khmaladze Transformation
 #' @include group.action.R
@@ -93,7 +92,7 @@ PT.Khmaladze.fit <- function(y1, y0, alpha=0.05, n.perm=999){
   object_perm$N<-N
   object_perm$T.obs<-T.obs
   object_perm$shift <- shift
-  object_perm$cv <- cv
+  object_perm$cv <- cv[2]
   object_perm$pvalue<-ind.rule
   object_perm$T.perm<- T.perm
   object_perm$n_perm<- n.perm
@@ -161,34 +160,6 @@ PT.Khmaladze.fit <- function(y1, y0, alpha=0.05, n.perm=999){
 }
 
 
-
-# "randomization.test" <- function(x,alpha){
-#   # Number of permutations
-#   n.perm <- length(x)
-#   # Observed test statistic
-#   Tn.obs <- x[1]
-#   
-#   # Corret size of the test
-#   # See Lehmann & Romano (2005), p. 633
-#   y <- sort(x)
-#   k <- n.perm - floor(n.perm*alpha)
-#   cv = y[k]
-#   M.plus <- sum(y>cv)
-#   M.zero <- sum(y==cv)
-#   a <-  (n.perm*alpha - M.plus)/M.zero
-#   
-#   # Rejection
-#   if(Tn.obs > cv){
-#     out <-  1
-#   } 
-#   else if(Tn.obs == cv){
-#     out <-  ifelse(runif(1) <= a, 1, 0)
-#   } 
-#   else {
-#     out <-  0 
-#   }
-#   return(c(cv,out))
-# }
 
 
 

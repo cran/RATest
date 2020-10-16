@@ -3,7 +3,8 @@
 \name{lee2008}
 \alias{lee2008}
 \title{Dataset used in Lee (2008)}
-\format{A data frame with 6558 observations and two variables:
+\format{
+A data frame with 6558 observations and two variables:
 \describe{
     \item{demsharenext}{Democrat vote share election t+1}
     \item{difdemshare}{Running variable. Diff. democratic share}
@@ -13,7 +14,8 @@
     \item{othofficeexp}{Oppositions political experience t}
     \item{demelectexp}{Democrat electoral experience t}
     \item{othelectexp}{Oposition electoral experience t}
-}}
+}
+}
 \source{
 Mostly Harmless Econometrics Data Archive: \url{http://economics.mit.edu/faculty/angrist/data1/mhe}
 }

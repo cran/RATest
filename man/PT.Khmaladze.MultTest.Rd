@@ -4,8 +4,14 @@
 \alias{PT.Khmaladze.MultTest}
 \title{Martingale transformed Permutation Test: Multiple Testing procedures.}
 \usage{
-PT.Khmaladze.MultTest(data, procedure = "maxT", alpha = 0.05,
-  n.perm = 499, B = 499, na.action)
+PT.Khmaladze.MultTest(
+  data,
+  procedure = "maxT",
+  alpha = 0.05,
+  n.perm = 499,
+  B = 499,
+  na.action
+)
 }
 \arguments{
 \item{data}{List. Data are presented in the form of a list, where each sublist contains the treatment and control group observations for a specific subgroup.}
@@ -61,7 +67,7 @@ adjusted.p.values
 }
 }
 \references{
-Chung, E. and Olivares, M. (2019). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Working Paper.
+Chung, E. and Olivares, M. (2020). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics, pages 65-70.
 Westfall, P.H. and Young, S.S. (1993). Resampling-based multiple testing: Examples and methods for p-value adjustment, Volume 279, John & Wiley Sons.
 }

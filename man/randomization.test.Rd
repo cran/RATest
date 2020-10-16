@@ -14,16 +14,20 @@ randomization.test(Tn, Tng, alpha = 0.05)
 \item{alpha}{Numeric. Nominal level for the test. The default is 0.05.}
 }
 \value{
-Numeric. A scalar \eqn{\phi(X)\in\{0,1\}}. The test rejects the null hypothesis if \eqn{\phi(X)=1}, and does not reject otherwise.
+Numeric. A vector containing \eqn{\phi(X)\in\{0,1\}} and \eqn{T^{(k)}(X)}. The test rejects the null hypothesis if \eqn{\phi(X)=1}, and does not reject otherwise.
 }
 \description{
-Calculates the randomization test. Further discussion can be found in chapter 15 of Lehmann and Romano (2005, p 633). Consider data \eqn{X}{X} taking values in a sample space \eqn{\Omega}. Let \eqn{\mathbf{G}} be a finite group of transformations from \eqn{\Omega}  onto itself, with \eqn{M=\vert \mathbf{G}\vert}. Let \eqn{T(X)} be a real-valued test statistic such that large values provide evidence against the null hypothesis. Denote by \deqn{T^{(1)}(X)\le T^{(2)}(X)\le\dots\le T^{(M)}(X)} the ordered values of \eqn{\{T(gX)\,:\,g\in\mathbf{G}\}}. Let \eqn{k=M-\lfloor M\alpha\rfloor} and define \deqn{M^{+}(x)} and \deqn{M^{0}(x)} be the number of values \eqn{T^{(j)}(X)}, \eqn{j=1,\dots,M}, which are greater than \eqn{T^{(k)}(X)} and equal to \eqn{T^{(k)}(X)} respectively. Set \deqn{a(X)=\frac{\alpha M-M^{+}(X)}{M^{0}(X)}}. The randomization test is given by \deqn{\phi(X)=1} if \eqn{T(x)> T^{(k)}(X)}, \deqn{\phi(X)=0} if \eqn{T(X)< T^{(k)}(X)}, and \deqn{\phi(X)=a(X)} if \eqn{T(X)= T^{(k)}(X)}.
+Calculates the randomization test. Further discussion can be found in chapter 15 of Lehmann and Romano (2005, p 633). Consider data \eqn{X}{X} taking values in a sample space \eqn{\Omega}. 
+Let \eqn{\mathbf{G}} be a finite group of transformations from \eqn{\Omega}  onto itself, with \eqn{M=\vert \mathbf{G}\vert}. Let \eqn{T(X)} be a real-valued test statistic such that large values provide 
+evidence against the null hypothesis. Denote by \deqn{T^{(1)}(X)\le T^{(2)}(X)\le\dots\le T^{(M)}(X)} the ordered values of \eqn{\{T(gX)\,:\,g\in\mathbf{G}\}}. Let \eqn{k=M-\lfloor M\alpha\rfloor} and 
+define \eqn{M^{+}(x)} and \eqn{M^{0}(x)} be the number of values \eqn{T^{(j)}(X)}, \eqn{j=1,\dots,M}, which are greater than \eqn{T^{(k)}(X)} and equal to \eqn{T^{(k)}(X)} respectively. Set \deqn{a(X)=\frac{\alpha M-M^{+}(X)}{M^{0}(X)}}. 
+The randomization test is given by \deqn{\phi(X)=1\{T(x)> T^{(k)}(X)\}+a(X)\times 1\{T(X)= T^{(k)}(X)\}~.}
 }
 \references{
 Lehmann, Erich L. and Romano, Joseph P (2005) Testing statistical hypotheses.Springer Science & Business Media.
 }
 \author{
-Maurcio Olivares Gonzalez
+Maurcio Olivares
 
 Ignacio Sarmiento Barbieri
 }

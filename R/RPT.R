@@ -49,7 +49,7 @@
 #'  \item{parameters}{Estimated parameters.}
 #'  \item{sample_sizes}{Groups lengths.}
 
-#' @author Maurcio Olivares Gonzalez
+#' @author Maurcio Olivares
 #' @author Ignacio Sarmiento Barbieri
 #' @references 
 #' Chung, E. and Romano, J. P. (2013). Exact and asymptotically robust permutation tests. The Annals of Statistics, 41(2):484–507.

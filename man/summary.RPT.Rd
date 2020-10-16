@@ -4,8 +4,7 @@
 \alias{summary.RPT}
 \title{Summarizing Robust Permutation Test}
 \usage{
-\method{summary}{RPT}(object, ..., digits = max(3, getOption("digits") -
-  3))
+\method{summary}{RPT}(object, ..., digits = max(3, getOption("digits") - 3))
 }
 \arguments{
 \item{object}{an object of class \code{"RPT"}, usually a result of a call to \code{\link{RPT}}}

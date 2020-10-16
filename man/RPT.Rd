@@ -4,8 +4,14 @@
 \alias{RPT}
 \title{Robust Permutation Test}
 \usage{
-RPT(formula, data, test = "means", n.perm = 499, na.action,
-  wilcoxon.option = "continuity")
+RPT(
+  formula,
+  data,
+  test = "means",
+  n.perm = 499,
+  na.action,
+  wilcoxon.option = "continuity"
+)
 }
 \arguments{
 \item{formula}{a formula object, with the response on the left of a ~ operator, and the groups on the right.}
@@ -80,7 +86,7 @@ Hollander, M. (1967). Asymptotic efficiency of two nonparametric competitors of 
 Lehmann, E. L. (1951). Consistency and unbiasedness of certain nonparametric tests. The Annals of Mathematical Statistics, pages 165–179.
 }
 \author{
-Maurcio Olivares Gonzalez
+Maurcio Olivares
 
 Ignacio Sarmiento Barbieri
 }

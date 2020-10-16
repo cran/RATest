@@ -7,7 +7,7 @@
 #' @param type Character. The action to be performed. It represents \eqn{gx}, the action the action  of \eqn{g\in\mathbf{G}} on \eqn{x\in\Omega}. It can be either permutations or sign changes.
 #' @return Numeric. A matrix of size \eqn{N\times M} where \eqn{N}{N} is the size of input \eqn{Z}{Z} and \eqn{M}{M} is the number of actions to be performed on \eqn{Z}{Z}.
 #'
-#' @author Maurcio Olivares Gonzalez
+#' @author Maurcio Olivares
 #' @author Ignacio Sarmiento Barbieri
 #' @references
 #' Lehmann, Erich L. and Romano, Joseph P (2005) Testing statistical hypotheses.Springer Science & Business Media.
