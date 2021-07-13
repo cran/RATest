@@ -31,8 +31,8 @@
 #' @keywords permutation test goodness-of-fit prepivoting Bayesian bootstrap
 #' @include group.action.R
 #' @include randomization.test.R
-#' @import compiler
-#' @importFrom stats rexp runif 
+#' @importFrom stats rexp runif
+#' @importFrom compiler cmpfun
 #' @examples
 #'\dontrun{
 #' Y0 <- rnorm(100, 1, 1)
@@ -151,7 +151,7 @@ prepivot.ks.permtest <- function(Y1,Y0, alpha, B, n.perm){
   return(w.ks.stat)
 }
 
-"boot.SKS.stat" <- cmpfun(pre.boot.SKS.stat)
+"boot.SKS.stat" <- compiler::cmpfun(pre.boot.SKS.stat)
 
 
 
@@ -178,7 +178,7 @@ prepivot.ks.permtest <- function(Y1,Y0, alpha, B, n.perm){
   return(w.bootstrap.sample)
 }
 
-"weighted.bootstrap" <- cmpfun(pre.weighted.bootstrap)
+"weighted.bootstrap" <- compiler::cmpfun(pre.weighted.bootstrap)
 
 
 

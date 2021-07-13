@@ -8,7 +8,7 @@
 #' @param ... unused
 #' @return \code{summary.PT.Khmaladze.fit} returns an object of \link{class} "\code{summary.PT.Khmaladze.fit}" which has the following components
 #'  \item{results}{Matrix with the Testing Problem, Sample Sizes, Number of Permutations, ATE, Test Statistic, Critical value and P-value.}
-#' @author Maurcio Olivares Gonzalez
+#' @author Maurcio Olivares
 #' @author Ignacio Sarmiento Barbieri
 #' @export
 

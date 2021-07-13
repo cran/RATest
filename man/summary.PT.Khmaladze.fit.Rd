@@ -21,7 +21,7 @@
 \code{summary} method for class \code{"PT.Khmaladze.fit"}
 }
 \author{
-Maurcio Olivares Gonzalez
+Maurcio Olivares
 
 Ignacio Sarmiento Barbieri
 }

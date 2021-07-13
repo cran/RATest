@@ -46,7 +46,7 @@ summary(pt.GoF)
 }
 \references{
 Khmaladze, E. (1981). Martingale Approach in the Theory of Goodness-of-fit Tests. Theory of Probability and its Application, 26: 240–257.
-Chung, Eunyi and Mauricio Olivares (2020). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
+Chung, E. and Olivares, M. (2021). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
 }
 \author{
 Maurcio Olivares

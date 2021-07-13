@@ -8,7 +8,7 @@
 #' @param ... unused
 #' @return \code{summary.RPT} returns an object of \link{class} "\code{summary.RPT}" which has the following components
 #'  \item{results}{Matrix with the Testing Problem, Point Estimates, Sample Sizes, Test Statistic, P-values and Sample Sizes.}
-#' @author Maurcio Olivares Gonzalez
+#' @author Maurcio Olivares
 #' @author Ignacio Sarmiento Barbieri
 #' @export
 

@@ -8,7 +8,7 @@
 #' @param ... unused
 #' @return \code{summary.RDperm} returns an object of \link{class} "\code{summary.RDperm}" which has the following components
 #'  \item{results}{Matrix with the Test Statistic, P-values and Q used}
-#' @author Maurcio Olivares Gonzalez
+#' @author Maurcio Olivares
 #' @author Ignacio Sarmiento Barbieri
 #' @export
 

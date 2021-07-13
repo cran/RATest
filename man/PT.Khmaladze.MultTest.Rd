@@ -20,9 +20,9 @@ PT.Khmaladze.MultTest(
 
 \item{alpha}{Significance level.}
 
-\item{n.perm}{Numeric. Number of permutations needed for the stochastic approximation of the p-values. See Remark 4 in Chung and Olivares (2019). The default is n.perm=499.}
+\item{n.perm}{Numeric. Number of permutations needed for the stochastic approximation of the p-values. See Remark 4 in Chung and Olivares (2020). The default is n.perm=499.}
 
-\item{B}{Numeric. Number of permutations needed for the stochastic approximation in the Westfall-Young procedures. See Remark 11 in Chung and Olivares (2019). The default is B=499.}
+\item{B}{Numeric. Number of permutations needed for the stochastic approximation in the Westfall-Young procedures. See Remark 11 in Chung and Olivares (2020). The default is B=499.}
 
 \item{na.action}{a function to filter missing data. This is applied to the model.frame . The default is na.omit, which deletes observations that contain one or more missing values.}
 }
@@ -39,7 +39,7 @@ An object of class "PT.Khmaladze.MultTest" is a list containing at least the fol
  \item{alpha}{Significance level.}
 }
 \description{
-This function applies the martingale transformed Permutation test (Chung and Olivares (2019)) to test whether there exists within-group treatment effect heterogeneity. 
+This function applies the martingale transformed Permutation test (Chung and Olivares (2020)) to test whether there exists within-group treatment effect heterogeneity. 
 The method jointly tests the null hypotheses that treatment effects are constant within mutually exclusive subgroups while allowing them to be different across subgroups. More formally, 
 assume the mutually exclusive subgroups are formed from observed covariates, and are taken as given. Denote \eqn{\mathcal{J}} the total number of such subgroups. 
 Let \eqn{F_0^{j}(y)} and \eqn{F_1^{j}(y)} be the CDFs of the control and treatment group for subgroup \eqn{1\le j\le \mathcal{J}}. The null hypothesis of interest is given by the joint hypothesis
@@ -49,7 +49,7 @@ for all mutually exclusive \eqn{j\in\{1,\dots,\mathcal{J}\}}, for some \eqn{\del
 for some \eqn{\delta_j} specifies whether the treatment effect is heterogeneous for a particular subgroup.
 
 To achieve control of the family-wise error rate, the function considers several multiple testing procedures, such as Bonferroni, maxT and minP (Westfall and Young (1993)), and Holm (1979).
-For further details, see Chung and Olivares (2019).
+For further details, see Chung and Olivares (2020).
 }
 \examples{
 \dontrun{
@@ -67,7 +67,7 @@ adjusted.p.values
 }
 }
 \references{
-Chung, E. and Olivares, M. (2020). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
+Chung, E. and Olivares, M. (2021). Permutation Test for Heterogeneous Treatment Effects with a Nuisance Parameter. Forthcoming in Journal of Econometrics.
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics, pages 65-70.
 Westfall, P.H. and Young, S.S. (1993). Resampling-based multiple testing: Examples and methods for p-value adjustment, Volume 279, John & Wiley Sons.
 }

@@ -3,7 +3,7 @@
 #' @description Calculates the randomization test. Further discussion can be found in chapter 15 of Lehmann and Romano (2005, p 633). Consider data \eqn{X}{X} taking values in a sample space \eqn{\Omega}. 
 #' Let \eqn{\mathbf{G}} be a finite group of transformations from \eqn{\Omega}  onto itself, with \eqn{M=\vert \mathbf{G}\vert}. Let \eqn{T(X)} be a real-valued test statistic such that large values provide 
 #' evidence against the null hypothesis. Denote by \deqn{T^{(1)}(X)\le T^{(2)}(X)\le\dots\le T^{(M)}(X)} the ordered values of \eqn{\{T(gX)\,:\,g\in\mathbf{G}\}}. Let \eqn{k=M-\lfloor M\alpha\rfloor} and 
-#' define \eqn{M^{+}(x)} and \eqn{M^{0}(x)} be the number of values \eqn{T^{(j)}(X)}, \eqn{j=1,\dots,M}, which are greater than \eqn{T^{(k)}(X)} and equal to \eqn{T^{(k)}(X)} respectively. Set \deqn{a(X)=\frac{\alpha M-M^{+}(X)}{M^{0}(X)}}. 
+#' define \eqn{M^{+}(x)} and \eqn{M^{0}(x)} be the number of values \eqn{T^{(j)}(X)}, \eqn{j=1,\dots,M}, which are greater than \eqn{T^{(k)}(X)} and equal to \eqn{T^{(k)}(X)} respectively. Set \deqn{a(X)=\frac{\alpha M-M^{+}(X)}{M^{0}(X)}~.} 
 #' The randomization test is given by \deqn{\phi(X)=1\{T(x)> T^{(k)}(X)\}+a(X)\times 1\{T(X)= T^{(k)}(X)\}~.}  
 #' 
 #' @param Tn Numeric. A scalar representing the observed test statistic \eqn{T(X)}.

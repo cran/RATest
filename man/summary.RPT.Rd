@@ -21,7 +21,7 @@
 \code{summary} method for class \code{"RPT"}
 }
 \author{
-Maurcio Olivares Gonzalez
+Maurcio Olivares
 
 Ignacio Sarmiento Barbieri
 }
