@@ -27,7 +27,7 @@
 #' @export
 
 plot.RDperm <- function(x,w, plot.class="both",...){
-  if(class(x)!="RDperm")(print("Element has to be of class RDperm"))
+  if(inherits(x, "RDperm")==F) print("Element has to be of class RDperm")
   data<-x$data
   cutoff<-x$cutoff
   z<-x$rv

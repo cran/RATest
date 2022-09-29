@@ -6,7 +6,7 @@
 #'
 #' Difference of means: Here, the null hypothesis is of the form \eqn{H_0: \mu(P)-\mu(Q)=0}, and the corresponding test statistic is given by 
 #'  \deqn{T_{m,n}=\frac{N^{1/2}(\bar{X}_m-\bar{Y}_n)}{\sqrt{\frac{N}{m}\sigma^2_m(X_1,\dots,X_m)+ \frac{N}{n}\sigma^2_n(Y_1,\dots,Y_n)}}}  
-#'  where \eqn{\bar{X}_m} and \eqn{\bar{Y}_n} are the sample means from population \eqn{P} and population \eqn{Q}, respectively, and \eqn{\sigma^2_m(X_1,\dots,X_m)} is a consistent estimator of \eqn{\sigma^2(P)$ when $X_1,\dots,X_m} are i.i.d. from \eqn{P}. Assume consitency also under \eqn{Q}.
+#'  where \eqn{\bar{X}_m} and \eqn{\bar{Y}_n} are the sample means from population \eqn{P} and population \eqn{Q}, respectively, and \eqn{\sigma^2_m(X_1,\dots,X_m)} is a consistent estimator of \eqn{\sigma^2(P)} when \eqn{X_1,\dots,X_m} are i.i.d. from \eqn{P}. Assume consistency also under \eqn{Q}.
 #'
 #' Difference of medians: Let \eqn{F} and \eqn{G} be the CDFs corresponding to \eqn{P} and \eqn{Q}, and denote \eqn{\theta(F)} the median of \eqn{F} i.e. \eqn{\theta(F)=\inf\{x:F(x)\ge1/2\}}. Assume that \eqn{F} is continuously differentiable at \eqn{\theta(P)} with derivative \eqn{F'} (and the same with \eqn{F} replaced by \eqn{G}). Here, the null hypothesis is of the form  \eqn{H_0: \theta(P)-\theta(Q)=0}, and the corresponding test statistic is given by
 #' \deqn{T_{m,n}=\frac{N^{1/2}\left(\theta(\hat{P}_m)-\theta(\hat{Q})\right)}{\hat{\upsilon}_{m,n}}}
@@ -16,7 +16,7 @@
 #'                                                                                        
 #'Difference of variances: Here, the null hypothesis is of the form \eqn{H_0: \sigma^2(P)-\sigma^2(Q)=0}, and the corresponding test statistic is given by 
 #'\deqn{T_{m,n}=\frac{N^{1/2}(\hat{\sigma}_m^2(X_1,\dots,X_,)-\hat{\sigma}_n^2(Y_1,\dots,Y_n))}{\sqrt{\frac{N}{m}(\hat{\mu}_{4,x}-\frac{(m-3)}{(m-1)}(\hat{\sigma}_m^2)^2)+\frac{N}{n}(\hat{\mu}_{4,y}-\frac{(n-3)}{(n-1)}(\hat{\sigma}_y^2)^2)}}} 
-#'where \eqn{\hat{\mu}_{4,m}} the sample analog of \eqn{E(X-\mu)^4} based on an iid sample \eqn{X_1,\dots,X_m} from \eqn{P}. Similarly for \eqn{\hat{\mu}_{4,n}}.
+#'where \eqn{\hat{\mu}_{4,m}} the sample analog of \eqn{E(X-\mu)^4} based on an i.i.d. sample \eqn{X_1,\dots,X_m} from \eqn{P}. Similarly for \eqn{\hat{\mu}_{4,n}}.
 #'
 #' We could also have the case when the parameter of interest is a function of the joint distribution. The examples considered here are
 #'

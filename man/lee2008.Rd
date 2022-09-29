@@ -2,7 +2,7 @@
 % Please edit documentation in R/lee2008.R
 \name{lee2008}
 \alias{lee2008}
-\title{Dataset used in Lee (2008)}
+\title{Data set used in Lee (2008)}
 \format{
 A data frame with 6558 observations and two variables:
 \describe{
@@ -17,7 +17,7 @@ A data frame with 6558 observations and two variables:
 }
 }
 \source{
-Mostly Harmless Econometrics Data Archive: \url{http://economics.mit.edu/faculty/angrist/data1/mhe}
+Mostly Harmless Econometrics Data Archive: \url{https://economics.mit.edu/people/faculty/josh-angrist/mhe-data-archive}
 }
 \description{
 Randomized experiments from non-random selection in U.S. House elections

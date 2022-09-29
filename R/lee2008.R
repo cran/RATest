@@ -1,4 +1,4 @@
-#' @title Dataset used in Lee (2008)
+#' @title Data set used in Lee (2008)
 #' @description Randomized experiments from non-random selection in U.S. House elections
 #' @format A data frame with 6558 observations and two variables:
 #' \describe{
@@ -11,7 +11,7 @@
 #'     \item{demelectexp}{Democrat electoral experience t}
 #'     \item{othelectexp}{Oposition electoral experience t}
 #' }
-#' @source Mostly Harmless Econometrics Data Archive: \url{http://economics.mit.edu/faculty/angrist/data1/mhe}
+#' @source Mostly Harmless Econometrics Data Archive: \url{https://economics.mit.edu/people/faculty/josh-angrist/mhe-data-archive}
 #' @references   Lee, D. (2008) Randomized experiments from non-random selection in U.S. House elections, \emph{Journal of Econometrics}, 142, 675-697
 #' @name lee2008
 NULL

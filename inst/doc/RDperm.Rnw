@@ -177,16 +177,16 @@
 
 
 \author{
-  \normalsize Mauricio Olivares-Gonz\'alez
+  \normalsize Mauricio Olivares
   \thanks{This research was supported by the Department of Economics, University of Illinois at Urbana-Champaign, Summer fellowship 2017. All of the computational experience reported here was conducted in the R language with the package {\tt RATest}\citep{RATest2017}. Code for all of the reported computation may be found in the vignette {\tt RDperm.Rnw} that appears as part of that package. All errors are our own.}\\
   \normalsize Department of Economics\\
-  \normalsize UIUC\\
-  \normalsize \url{lvrsgnz2@illinois.edu}
+  \normalsize UCL\\
+  \normalsize \url{mauricio.olivares@ucl.ac.uk}
   \and
   \normalsize Ignacio Sarmiento-Barbieri\\
   \normalsize Department of Economics\\
-  \normalsize UIUC\\
-  \normalsize \url{srmntbr2@illinois.edu}
+  \normalsize University of Los Andes\\
+  \normalsize \url{i.sarmiento@uniandes.edu.co}
 }
 
 
@@ -548,7 +548,7 @@ q_{UB}\right\},q_{LB}\right\}
 \end{align}
 where $q_{LB}=10$, and $q_{UB}=n^{0.9}/\log n$. The lower bound, $q_{LB}$ represents situations in which the randomized and non-randomized versions of the permutation test differ, whereas the upper bound, $q_{UB}$ guarantees the rate of convergence does not violate the formal results in \cite{canay2016approximate}, theorem 4.1. The same reasoning applies if we replace $q$ with $q^a$.
 \par
-The density function $\hat{f}_n(\cdot)$ was estimated employing the univariate adaptative kernel density estimation \textit{\`{a} la Silverman} \citep[e.g.][]{portnoy1989adaptive,koenker2002inference,silverman1986density}, and the results were obtained directly from the \textbf{R} package \textbf{quantreg} (\cite{koenker2016quantreg}). Finally, $\rho$ and $\sigma_Z$ were estimated by their sample counterparts.
+The density function $\hat{f}_n(\cdot)$ was estimated employing the univariate adaptive kernel density estimation \textit{\`{a} la Silverman} \citep[e.g.][]{portnoy1989adaptive,koenker2002inference,silverman1986density}, and the results were obtained directly from the \textbf{R} package \textbf{quantreg} (\cite{koenker2016quantreg}). Finally, $\rho$ and $\sigma_Z$ were estimated by their sample counterparts.
 
 
 
@@ -563,7 +563,7 @@ Then, the induced order statistics for the $j$-th baseline covariate is
 W^{-}_{j,[\hat{q}_j]},\dots,W^{-}_{j,[1]}\:\:\:\text{ and }\:\:\:
 W^{+}_{j,[1]},\dots, W^{+}_{j,[\hat{q}_j]}
 \]
-Second, we may want to test whether or not the \textit{joint} distribution of the baseline covariates is continuos at the cutoff. In this case, we will estimate the tuning parameter $q$ for each of the $K$ baseline covariates as we just described, but we choose $\hat{q}=\min\{\hat{q}_1,\dots,\hat{q}_K\}$ and calculate the order statistics
+Second, we may want to test whether or not the \textit{joint} distribution of the baseline covariates is continuous at the cutoff. In this case, we will estimate the tuning parameter $q$ for each of the $K$ baseline covariates as we just described, but we choose $\hat{q}=\min\{\hat{q}_1,\dots,\hat{q}_K\}$ and calculate the order statistics
 \[
 Z^{-}_{(\hat{q})}\le \dots\le Z^{-}_{(1)}\:\:\text{ and }\:\:Z^{+}_{(1)}\le\dots\le Z^{+}_{(\hat{q})}
 \]
@@ -606,7 +606,7 @@ The empirical illustration is based on Lee's \citeyearpar{lee2008randomized} of 
 
 The objective of Lee's \citeyearpar{lee2008randomized} is to assess whether a Democratic candidate of the US. House of Representative has an edge over his competitors if his party won the previous election. The causal effect of party incumbency is captured by exploiting the fact that an election winner is determined by $D =1(Z\geq0)$ where $Z$, the running variable, is the vote shares between Democrats and Republicans.
 
-Figure \ref{fig:panel.a} shows \cite{lee2008randomized} sharp RD stgrategy. The figure illustrates the sharp change in probability of a Democrat winning against the difference in vote share in the preivous election. The data used here and contained in the package have six covariates and 6558 observations with information on the Democrat runner and the opposition. The data set is named \texttt{lee2008}, and it is a subset of the publicly available data set in the Mostly Harmless Econometrics Data Archive (\url{http://economics.mit.edu/faculty/angrist/data1/mhe})
+Figure \ref{fig:panel.a} shows \cite{lee2008randomized} sharp RD strategy. The figure illustrates the sharp change in probability of a Democrat winning against the difference in vote share in the previous election. The data used here and contained in the package have six covariates and 6558 observations with information on the Democrat runner and the opposition. The data set is named \texttt{lee2008}, and it is a subset of the publicly available data set in the Mostly Harmless Econometrics Data Archive (\url{https://economics.mit.edu/people/faculty/josh-angrist/mhe-data-archive})
 
 <<panel.asetup, include=FALSE>>=
 panel.a.cap = "Candidate's probability of winning election $t+1$, by margin of victory in election $t$: local averages and logit polynomial fit"
